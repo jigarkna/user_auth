@@ -1,5 +1,15 @@
 # README
 
+
+User Authorization app built on ruby/rails. Constitutes:
+
+USER SIGNUP
+USER LOGIN
+USER FORGOT PASSWORD
+USER RESET PASSWORD
+USER EDIT PROFILE
+USER LOGOUT
+***********************************************************************
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
