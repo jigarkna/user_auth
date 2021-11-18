@@ -33,7 +33,7 @@ class PasswordController < ApplicationController
 			puts '-------------resetting the password----------------'
 			puts '-----------------------end-------------------------'
 			flash[:notice] = "Your password has been reset"
-			redirect_to :controller=>:account, :action=>:login
+			redirect_to :controller=>:home, :action=>:index
 		  else
 			render :action=>:reset
 		  end

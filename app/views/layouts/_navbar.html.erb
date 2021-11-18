@@ -5,11 +5,11 @@
 	 <ul class="navbar-nav mr-auto">
      <% if session[:user] %>
       <li class="nav-item active">
-         <span class="nav-link">USER=> </span>
+		<span class="nav-link"><%=@user.email%></span>
       </li>
        <% else %>
        <li class="nav-item active">
-         <a class="navbar-brand" href="/"><span class="nav-link">User Auth</span></a>
+         <span class="nav-link">User Auth</span>
       </li>
       <% end %>
     </ul>
