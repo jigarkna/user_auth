@@ -1,0 +1,31 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+	 <ul class="navbar-nav mr-auto">
+     <% if session[:user] %>
+      <li class="nav-item active">
+         <span class="nav-link">USER=> </span>
+      </li>
+       <% else %>
+       <li class="nav-item active">
+         <a class="navbar-brand" href="/"><span class="nav-link">User Auth</span></a>
+      </li>
+      <% end %>
+    </ul>
+	<div class="navbar-end">
+      <div class="navbar-item">
+                <% if session[:user] %>
+                <%= link_to('Edit Profile', { action: 'edit_profile', controller: 'profile'},    class: 'btn btn-primary') %> 
+                <%= link_to('Reset Password', { action: 'reset_password', controller: 'password'},    class: 'btn btn-success') %> 
+                <%= link_to('Logout', { action: 'logout', controller: 'account'},    class: 'btn btn-danger') %> 
+				<% else %>
+          <%= link_to('Sign Up', { action: 'signup', controller: 'account'},  class: 'btn btn-primary active') %>
+			    <%= link_to('Sign In', { action: 'login', controller: 'account'},    class: 'btn btn-success') %> 
+                <% end %>
+      </div>
+    </div>
+    </ul>
+	
+  </div>
+</nav>
